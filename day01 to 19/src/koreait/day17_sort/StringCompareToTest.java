@@ -1,4 +1,4 @@
-package sort;
+package koreait.day17_sort;
 
 public class StringCompareToTest {
 	public static void main(String[] args) {

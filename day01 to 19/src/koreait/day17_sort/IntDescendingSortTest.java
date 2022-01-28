@@ -1,9 +1,9 @@
-package sort;
+package koreait.day17_sort;
 
 import java.util.Arrays;
 
-public class IntAscendingSortTest {
-		//오름차순
+public class IntDescendingSortTest {
+		//내림차순
 	public static void main(String[] args) {
 	
 		int[] datas = {45,34,78,65,99,14};
@@ -12,11 +12,11 @@ public class IntAscendingSortTest {
 		for(int i=0;i<datas.length;i++) {
 			
 			for(int k=i+1;k<datas.length;k++) {
-				if(datas[i] > datas[k]) {
+				if(datas[i] < datas[k]) {		//오름차순에서 비교조건 식만 변경.
 					//교환 
 					int temp = datas[k];
 					datas[k] = datas[i];
-					datas[i] = temp;
+					datas[i] = temp;	
 				}
 			}//k변수 for문
 		System.out.println("i = " + i + "중간결과 : " + Arrays.toString(datas));
@@ -26,5 +26,3 @@ public class IntAscendingSortTest {
 		
 		}
 }
-
-

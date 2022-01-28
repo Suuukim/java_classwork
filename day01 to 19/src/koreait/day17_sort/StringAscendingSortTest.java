@@ -1,4 +1,4 @@
-package sort;
+package koreait.day17_sort;
 
 import java.util.Arrays;
 
