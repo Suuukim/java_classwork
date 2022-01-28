@@ -53,6 +53,5 @@ public class StringArrayTest {
 			
 			System.out.println(Arrays.toString(names));
 			
-					
 		}
 }
