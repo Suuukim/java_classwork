@@ -3,7 +3,7 @@ package sort;
 import java.util.Arrays;
 
 public class IntAscendingSortTest {
-		//정렬의 기본적인 방법.
+		//오름차순
 	public static void main(String[] args) {
 	
 		int[] datas = {45,34,78,65,99,14};
