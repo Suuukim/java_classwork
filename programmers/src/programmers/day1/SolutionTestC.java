@@ -7,8 +7,8 @@ public class SolutionTestC {
 		
 		Scanner sc = new Scanner(System.in);
 		int leng;			//가로입력값
-		int bre;		//세로입력값
-		char ch = '★';
+		int bre;			//세로입력값
+		
 		
 		System.out.print("가로 값을 입력하세요. -> ");
 		leng = sc.nextInt();
@@ -16,14 +16,8 @@ public class SolutionTestC {
 		bre = sc.nextInt();
 		
 		for(int i=0;i<leng;i++) {
-			for(int k=0;k<bre;k++) {
-				if(leng > i) {
-					ch += 5;
-				}
-			} System.out.print(ch);
-			
+			System.out.print("★");
 		}
-		
-		
 	}
 }
+
