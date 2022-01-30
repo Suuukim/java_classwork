@@ -47,7 +47,5 @@ public class ScannerEx {
 		char gender = jumin.charAt(7);			//charAt(int - index) 문자열에서 특정 위치의 문자를 추출하는 메소드
 		System.out.println("gender : " + gender);
 		
-		
-		
 	}
 }
