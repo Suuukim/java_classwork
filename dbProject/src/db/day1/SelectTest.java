@@ -14,7 +14,7 @@ public class SelectTest {
 		PreparedStatement pstmt = null;
 		
 		//select 쿼리는 반환결과 데이터를 저장해야 합니다.
-		ResultSet rs = null;		//쿼리 반환결과 테이블의 데이터를 참조합니다. 반환결과는 행단위로 접근합니다.
+		ResultSet rs = null;		//쿼리 반환결과 즉 테이블의 데이터를 참조합니다. 반환결과는 행단위로 접근합니다.
 		//insert, update, delete 는 쿼리 실행한 반환결과 데이터가 없습니다.
 		
 		try {

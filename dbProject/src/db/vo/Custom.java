@@ -1,5 +1,6 @@
 package db.vo;
 
+
 import java.sql.Date;
 
 //VO : Value Object , 여러개의 데이터를 저장하는 것이 목적입니다.
@@ -8,18 +9,20 @@ public class Custom {
 	private String name;
 	private String email;
 	private int age;
-	private Date reg_date;			//registration
+	private Date reg_date;		//registration
 	
-	////단축키	alt + shift + s + o -> 커스텀 생성자, getter/seter, toString 을 자동으로 만들어 줍니다.
-	public Custom(String custom_id,String name,String email,int age,Date reg_date) {		
-		this.custom_id = custom_id;
-		this.name = name;
-		this.email = email;
-		this.age = age;
+	
+	//alt+shift+s 단축키 -> 커스텀 생성자, getter/setter, toString 을 자동으로 만들어 줍니다.
+	
+	public Custom(String custom_id,String name,String email,int age, Date reg_date) {		
+												
+		this.custom_id=custom_id;
+		this.name=name;
+		this.email=email;
+		this.age=age;
 		this.reg_date=reg_date;
 	}
 
-	
 	public String getCustom_id() {
 		return custom_id;
 	}
@@ -60,13 +63,14 @@ public class Custom {
 		this.reg_date = reg_date;
 	}
 	
-	//단축키 ctrl + spacebar / toString
+	
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
-		return custom_id + ": " + name + "," + email + "," + age +"(" + reg_date + ")";
+		return String.format("%-20s", custom_id) + ": " 
+					+ String.format("%-20s", name) + "," 
+					+ String.format("%-20s", email) + "," 
+					+ String.format("%-5s", age) + "(" + reg_date + ")";
 	}
-
-
-
+	
+	
 }

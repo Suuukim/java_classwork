@@ -19,9 +19,6 @@ public class SelectTest2 {
 //			pstmt.execute();			//insert, update, delete에 사용.
 			rs = pstmt.executeQuery();	//select 사용.
 			
-			
-				
-			
 			System.out.println("행 데이터 보기 ------------------");
 			int i=1;
 			while(rs.next()) {
