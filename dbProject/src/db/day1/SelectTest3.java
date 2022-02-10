@@ -4,33 +4,36 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.Scanner;
 
-public class SelectTest2 {
-// ResultSet 타입 쿼리 결과를 모두 출력하기 : rs.next() 반복조건으로 이용하여 합니다.
+public class SelectTest3 {
+// select 쿼리를 조건식으로 조회하는 연습입니다. 조건컬럼 custom_id
+//		-> 조회결과는 0 또는 1 개입니다.
+// 조건식 사용 컬럼이 기본키가 아닐때는 while 반복하며 카운트변수 사용합니다.
+	
 	public static void main(String[] args) {
-
+		Scanner sc = new Scanner(System.in);
 		Connection conn = OracleConnectUtil.connect();
-		String sql = "select * from tbl_custom#";
+		String sql = "select * from tbl_custom# where custom_id=?";
 		PreparedStatement pstmt = null;
-		
 		ResultSet rs = null;		
+		
+		System.out.print("조회할 고객 id 입력하세요. -> ");
+		String custom_id = sc.nextLine();
+		
 		try {
 			pstmt = conn.prepareStatement(sql);
-//			pstmt.execute();			//insert, update, delete에 사용.
-			rs = pstmt.executeQuery();	//select 사용.
+			pstmt.setString(1, custom_id); 
+			rs = pstmt.executeQuery();	
 			
-			
-				
-			
-			System.out.println("행 데이터 보기 ------------------");
-			int i=1;
-			while(rs.next()) {
-			System.out.println(i++ + "행  ");
+			if(rs.next()) {
 			System.out.print(String.format("%-20s", rs.getString("custom_id")));		//문자열 오른쪽정렬이 기본
 			System.out.print(String.format("%-20s", rs.getString("name")));				// ㄴ -기호는 왼쪽 정렬
 			System.out.print(String.format("%-20s", rs.getString("email")));
 			System.out.print(String.format("%5d    ", rs.getInt("age")));
 			System.out.println(rs.getTimestamp("reg_date"));
+			} else {
+				System.out.println("조회한 id는 없는 고객입니다.");
 			}
 			pstmt.close();
 			

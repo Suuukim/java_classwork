@@ -21,6 +21,6 @@ public class VarEx2 {
 		System.out.println("result : " + result);
 		System.out.println("result2 : " + result2);
 		System.out.println("d : " + d);
-	
+		
 	}
 }
