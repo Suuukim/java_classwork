@@ -16,7 +16,7 @@ public class RandomTest {
 		for( int i=0;i<10;i++) {
 			int temp = r1.nextInt();		//난수 int값을 리턴.
 			System.out.print(temp + "\t\t");
-			System.out.println(r2.nextInt(100));	//어떤 난수일까요?	-> 0~99 범위
+			System.out.println(r2.nextInt(100)+1);	//어떤 난수일까요?	-> 0~99 범위
 		}
 
 		// 1~46 범위의 난수 10개
