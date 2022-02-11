@@ -15,27 +15,34 @@ public class SwitchTest { // if문을 switch 문으로 바꾸는 연습니다.
 		System.out.print("선택하세요. -> ");
 
 		menu = sc.nextInt();
-
-		if (menu == 1) {
+		while(true) {
+			if (menu == 1) {
 			System.out.println("장바구니로 이동합니다.");
 			System.out.println("🎁🎁");
+			
 		} else if (menu == 2) {
 			System.out.println("상품목록으로 이동합니다.");
 			System.out.println("✔✔");
+			
 		} else if (menu == 3) {
 			System.out.println("결제화면으로 이동합니다.");
 			System.out.println("👀👀");
+			
 		} else if (menu == 4) {
 			System.out.println("배송조회로 이동합니다.");
 			System.out.println("👍👍");
-
+			
 		} else if (menu == 5) {
 			System.out.println("프로그램 종료 합니다.");
+			
+			
 		} else {
 			System.out.println("잘못된 선택입니다.");
-		}
-
-		System.out.println("[[[if문 프로그램 종료]]]");
+			System.out.println("[[[if문 프로그램 종료]]]");
+		} break;
+		
+		} 
+		 
 
 		// 위의 조건식은 == (같다) 비교로 여러개의 else if를 사용합니다.
 		// -> 이런 경우 switch 문을 사용할 수 있습니다.

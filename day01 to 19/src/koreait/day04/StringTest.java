@@ -35,10 +35,10 @@ public class StringTest {   //문자열 다루는 클래스 String을 연습합�
 		String nickname;			//String 타입의 객체 즉 문자열을 참조하는 변수 -> nickname
 		
 //		nickname = sc.next();		//키보드로 입력 받은 문자열을 메모리에 저장하고 그 주소를 nickname 이 참조합니다.
+		System.out.print("nickname 입력하세요 -> ");
 		nickname = sc.nextLine();
 		//next 메소드는 공백 또는 엔터 이전 까지만 저장
 		//nextLine 메소드는 엔터 이전까지 저장
-		System.out.println("nickname = " + nickname);
 		System.out.println("nickname length = " + nickname.length());
 		System.out.println("nickname equals = " + nickname.equals("James"));
 		System.out.println("일부 추출=" + nickname.substring(4));   //위치 4부터 끝까지

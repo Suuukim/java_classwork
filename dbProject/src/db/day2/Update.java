@@ -10,33 +10,58 @@ import db.day1.OracleConnectUtil;
 
 public class Update {
 
+	private static Connection conn = OracleConnectUtil.connect();
+
 	public static void main(String[] args) {
-		//원하는 고객ID 입력받아서 email 을 수정하게 해주세요.
-		Connection conn = OracleConnectUtil.connect();
-		PreparedStatement pstmt;
-		
-		String sql = "UPDATE tbl_custom# set email = ? where custom_id = ?";
 		Scanner sc = new Scanner(System.in);
-		System.out.print("고객 ID를 입력하세요 -> ");
-		String id = sc.nextLine();
-		System.out.print("수정할 email을 입력하세요. -> ");
-		String email = sc.nextLine();
+		PreparedStatement pstmt = null;
+		String sql = "UPDATE TBL_CUSTOM# SET EMAIL=? WHERE CUSTOM_ID=?";
+		String custom_id=null;
 		
+		while (true) {
+			System.out.print("email 변경을 원하는 고객 ID를 입력하세요. -> ");
+			custom_id = sc.nextLine();
+			if (!idCheck(custom_id)) {
+				System.out.println("존재하는 ID입니다.");
+				break;
+			} else {
+				System.out.println("존재하지 않는 ID입니다. 다시 입력하세요");
+			}
+		}
+		System.out.print("원하시는 email을 입력하세요. -> ");
+		String email = sc.nextLine();
 		try {
 			pstmt = conn.prepareStatement(sql);
-		
 			pstmt.setString(1, email);
-			pstmt.setString(2, id);
-			
+			pstmt.setString(2, custom_id);
+
 			pstmt.execute();
 			pstmt.close();
-		}catch (SQLException e) {
+
+		} catch (SQLException e) {
 			System.out.println("SQL 실행 오류 : " + e.getMessage());
 		}
+		System.out.println("정상적으로 email이 변경 되었습니다.");
 		OracleConnectUtil.close(conn);
-		
-		
-		
+		sc.close();
+	}
+
+	private static boolean idCheck(String id) {
+		boolean result = false;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		String sql = "select * from tbl_custom# where custom_id=?";
+		try {
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, id);
+			rs = pstmt.executeQuery();
+			if (!rs.next())
+				result = true;
+			pstmt.close();
+		} catch (SQLException e) {
+			System.out.println("SQL 실행 오류" + e.getMessage());
+		}
+		return result; 
 	}
 
 }

@@ -21,7 +21,7 @@ public class StudentScore {
 		System.out.print("국어 ->  " ); 		this.korean = sc.nextInt();
 		System.out.print("영어 ->  " );		this.english = sc.nextInt();
 		System.out.print("과학 ->  " );		this.science = sc.nextInt();
-//		sc.close();
+		//		sc.close();
 	}
 	
 	void printScore() {
@@ -36,6 +36,8 @@ public class StudentScore {
 	double avg() {
 		return (double)sum()/3;     //return 값 계산식에 sum() 메소드와 캐스팅을 활용하세요.
 	}
+
+
 }
 		
 		
