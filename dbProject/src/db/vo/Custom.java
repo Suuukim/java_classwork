@@ -18,7 +18,6 @@ public class Custom {
 	}
 	
 	
-	
 	//alt+shift+s 단축키 -> 커스텀 생성자, getter/setter, toString 을 자동으로 만들어 줍니다.
 	
 	public Custom(String custom_id,String name,String email,int age, Date reg_date) {		
