@@ -85,7 +85,7 @@ public class ProductDao {
 			
 			pstmt.setString(1,  vo.getPname());			//방법2)
 			pstmt.setInt(2,  vo.getPrice());			//방법2)
-			pstmt.setString(3,  vo.getCategory());			//방법2)
+			pstmt.setString(3,  vo.getCategory());		//방법2)
 			pstmt.setString(4, vo.getPcode());		//방법2)
 			
 			pstmt.execute();
@@ -118,6 +118,7 @@ public class ProductDao {
 		OracleConnectUtil.close(conn);
 	}
 	
+	//selectAll 
 	public List<Product> selectAll() {
 		Connection conn = OracleConnectUtil.connect();
 		String sql="select * from tbl_pcode#";

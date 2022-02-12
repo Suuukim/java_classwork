@@ -12,8 +12,8 @@ public class StudentScore {
 	int science;
 	
 	//추가로 키보드 입력을 받는 메소드를 만들면 좋겠습니다.
+	Scanner sc = new Scanner(System.in);
 	void inputData() {
-		Scanner sc = new Scanner(System.in);
 		//아직 객체가 생성되지 않은 상태이므로 클래스에서 this를 사용합니다. 
 		//this는 실행할때 이 메소드를 실행하는 객체가 됩니다. 
 		System.out.print("이름 ->  " );  		this.name = sc.nextLine();
