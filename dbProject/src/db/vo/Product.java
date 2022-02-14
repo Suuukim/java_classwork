@@ -50,8 +50,10 @@ public class Product {
 	}
 
 	
-	
-	
-	
+	@Override
+	public String toString() {
+//		return pcode + category + pname +  price ;
+		return String.format("%-10s%-10s%-10s\t%10s",pcode,category,pname,price);
+	}
 	
 }

@@ -119,9 +119,9 @@ public class ProductDao {
 	}
 	
 	//selectAll 
-	public List<Product> selectAll() {
+	public List<Product> selectBySaleAll() {
 		Connection conn = OracleConnectUtil.connect();
-		String sql="select * from tbl_pcode#";
+		String sql="SELECT * FROM v_sale ";
 		PreparedStatement pstmt = null;
 		ResultSet rs= null;		
 		List<Product> products = new ArrayList<>();
