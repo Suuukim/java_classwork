@@ -69,7 +69,6 @@ public class Custom {
 		this.reg_date = reg_date;
 	}
 	
-	
 	@Override
 	public String toString() {
 		return String.format("%-20s", custom_id) + ": " 

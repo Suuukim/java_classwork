@@ -50,7 +50,7 @@ public class SaleByCustom {
 	@Override
 	public String toString() {		//String 혀ㅛㅇ
 //		return  custno + " " + custname + " " + agrade + " " + asum;
-		return String.format("%-10s%-10s%-10s%-10s",custno,custname,agrade,asum);
+		return String.format("%-10s%-10s%-10s\t%-10s",custno,custname,agrade,asum);
 	}
 	
 	

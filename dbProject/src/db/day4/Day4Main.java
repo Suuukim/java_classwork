@@ -16,8 +16,5 @@ public class Day4Main {
 										 "고객번호","고객성명","고객등급","총매출금액" ));
 		for(SaleByCustom vo : list) 
 			System.out.println(vo);
-	
-	
-	
 	}
 }

@@ -14,10 +14,8 @@ public class JDBCConnectTest {			//연결 테스트용 프로그램
 		//디비버에서 확인합니다.
 		String url = "jdbc:oracle:thin:@//localhost:1521/XE";		
 		//localhost는 진짜서버가 있을 때는 도메인네임 또는 ip 입니다. localhost는 로컬컴퓨터가 서버일때입니다.
-		
 		String user = "idev";
 		String password = "1234";
-		
 		//jdbc 오라클 드라이버로 사용되는 클래스를 메모리에 로드하기
 		String driver = "oracle.jdbc.driver.OracleDriver";		//패키지이름.클래스명
 		try {
