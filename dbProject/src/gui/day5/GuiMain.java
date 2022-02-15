@@ -111,7 +111,12 @@ public class GuiMain extends JFrame implements ActionListener{
 			}else if(e.getSource()==bt2) {
 				JOptionPane.showMessageDialog(this, "파일저장 입니다.");
 			}else if(e.getSource()==bt3) {
-				JOptionPane.showMessageDialog(this, "단어검색 입니다.");
+				if(tf3.getText().length()==0) {
+				JOptionPane.showMessageDialog(this, "검색할 단어를 입력해 주세요.");
+			
+				}else	{
+					new TestKiosk();
+				}
 			}else if(e.getSource()==bt4) {
 				JOptionPane.showMessageDialog(this, "프로그램 종료 입니다.");
 				dispose();			//윈도우 하면 리소스 해제
