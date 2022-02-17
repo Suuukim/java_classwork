@@ -413,9 +413,7 @@ public class Kiosk {
             panel_Topping.setVisible(true);
             panel_Menu.setVisible(false);
 
-            
             btnString2 = menu[1]+"\t\t"+textLavel(cost[1])+"\t"+(int)spinner2.getValue()+"\n\n";
-            
             }
          }      
       });

@@ -40,7 +40,6 @@ public class TestKiosk {
 		JButton btnconfirm = new JButton("결제하기");
 		btnconfirm.setBounds(299, 600, 97, 23);
 		panel_cart.add(btnconfirm);
-
 	
 		JTextArea textArea = new JTextArea(TextArea.SCROLLBARS_VERTICAL_ONLY, 0);
 		textArea.setBounds(33, 29, 404, 429);
@@ -49,7 +48,6 @@ public class TestKiosk {
 		panel_cart.add(textArea);
 		frame.setVisible(true);
 	}
-
 	
 	public static void main(String[] args) {
 		TestKiosk window = new TestKiosk();
