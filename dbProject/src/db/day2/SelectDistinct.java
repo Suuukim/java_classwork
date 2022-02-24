@@ -51,9 +51,6 @@ public class SelectDistinct {
 			System.out.println("상품코드가 구매내역에 존재합니다.");
 		else
 			System.out.println("구매내역에 없는 상품코드 입니다.");
-		
-		
-		
 	}
 
 }
