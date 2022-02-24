@@ -94,12 +94,12 @@ public class G_GroupDao {
 	public void update(G_Group vo) { 
 		Connection conn = OracleConnectUtil.connect();
 		PreparedStatement pstmt = null;
-		String sql = "UPDATE G_GROUP SET MEMBER_CNT=? WHERE TEAM_NAME = ?";
+		String sql = "UPDATE G_GROUP SET D_SONG=? WHERE ENT_CODE = ?";
 		try {
 			pstmt = conn.prepareStatement(sql);
 
-			pstmt.setInt(1, vo.getMember_cnt()); // 방법2
-			pstmt.setString(2, vo.getTeam_name()); // 방법2
+			pstmt.setString(1, vo.getD_song()); // 방법2
+			pstmt.setInt(2, vo.getEnt_code()); // 방법2
 			pstmt.execute();
 			pstmt.close();
 
