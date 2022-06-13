@@ -26,7 +26,6 @@ public class GuiMain extends JFrame implements ActionListener{
 	public GuiMain() {
 		init();		//윈도우(화면)를 구성하는 요소를 생성합니다.
 	}
-	
 
 	private void init() {
 		//컴포넌트의 크기와 위치 정하기

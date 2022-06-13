@@ -10,7 +10,7 @@ public class G_Group {
 	private String d_song;
 	private Date d_date;
 	private String f_name;
-	private String leader;
+	private String leader; 
 	
 	public G_Group(int ent_code, String team_name, int member_cnt, String d_song, Date d_date, String f_name,
 			String leader) {

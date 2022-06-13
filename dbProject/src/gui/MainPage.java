@@ -31,7 +31,6 @@ import ent_page.Ent_SM;
 import ent_page.Ent_YG;
 import ggroup.G_Group;
 import ggroup.G_GroupDao;
-import javafx.scene.control.Hyperlink;
 import singer_page.AS_geiselle;
 import singer_page.AS_karina;
 import singer_page.AS_ningning;
