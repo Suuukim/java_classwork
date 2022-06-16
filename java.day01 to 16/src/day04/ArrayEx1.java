@@ -16,7 +16,7 @@ public class ArrayEx1 {
 		System.out.println("score : " + Arrays.toString(score));
 		
 		int tmp = score[k+2] + score[4];
-		System.out.println("tmp : " + tmp);
+		System.out.println("tmp : " + tmp);	//90
 		System.out.println();
 		
 		for(int i=0;i<score.length;i++) {
