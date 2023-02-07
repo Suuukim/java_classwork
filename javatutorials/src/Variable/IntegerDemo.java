@@ -8,5 +8,14 @@ public class IntegerDemo {
 		
 		a = 2;
 		System.out.println(a+1); 	//3
+		
+		double b = 1.1;
+		System.out.println(b+1.1); 	//2.2
+		
+		b = 2.1;
+		System.out.println(b+1.1);	//3.2
+		
+//		int c = 1.1;	->에러 정수형식인데 실수를 대입하려고 했기 때문.
+		
 	}
 }
