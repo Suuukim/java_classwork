@@ -25,6 +25,7 @@ background-color:lightgray;">
 </p>
 </section>
 
+
 <jsp:include page="footer.jsp"/>
 
 </body>
